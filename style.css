@@ -30,6 +30,13 @@ header {
   justify-content: center;
 }
 
+.wrapper {
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  background: #ffc600;
+}
+
 /***********************************************************/
 /* HTML TAGS */
 /***********************************************************/
@@ -175,6 +182,70 @@ li.logo a {
   #hamnav input:checked ~ #hamitems { display: block; }
 }
 
+/***********************************************************/
+/* GAME */
+/***********************************************************/
+
+.scoring-section {
+  text-align: center;
+}
+.game-title {
+  margin-top: 10px;
+
+  font-size: 10rem;
+  line-height: 1;
+  margin-bottom: 0;
+  font-family: 'Amatic SC', cursive;
+  color: black;
+}
+
+.score {
+  background: rgba(255,255,255,0.2);
+  padding: 0 3rem;
+  line-height: 1;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+.game {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url('images/dirt.svg') bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height:70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+  background: url('images/mole.svg') bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.hole.up .mole {
+  top: 0;
+}
 
 
 /***********************************************************/
