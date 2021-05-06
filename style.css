@@ -201,7 +201,7 @@ iframe {
 
 
 /***********************************************************/
-/* GAME */
+/* GAME WHACK-ME*/
 /***********************************************************/
 
 .scoring-section {
@@ -299,6 +299,55 @@ iframe {
 
 .hole.up .mole {
   top: 0;
+}
+
+
+/***********************************************************/
+/* GAME RACE */
+/***********************************************************/
+table tr td {
+   content: "";
+   display: inline-block;
+   vertical-align: top;
+   min-height: 80px;
+   min-width: 80px;
+   border: 1px solid whitesmoke;
+}
+
+table {
+  margin: auto;
+}
+
+td.active.player1 {
+  background-image: url(images/runner_1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+
+td.active.player2 {
+  background-image: url(images/runner_2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+
+td:last-child {
+  background-image: url(images/finish.png);
+  background-size: cover;
+}
+
+td:last-child.active {
+  background-size: 90%, cover;
+  background-position: center, top left;
+}
+
+#player1_race td:last-child.active {
+  background-image: url(images/runner_1.png), url('images/finish.png');
+}
+
+#player2_race td:last-child.active {
+  background-image: url(images/runner_2.png), url('images/finish.png');
 }
 
 

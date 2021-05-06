@@ -1,3 +1,7 @@
+// *****************************************************
+// *****************  WHACK ME GAME  *******************
+// *****************************************************
+
 const holes = document.querySelectorAll('.hole');
   const scoreBoard = document.querySelector('.score');
   const moles = document.querySelectorAll('.mole');
@@ -46,4 +50,29 @@ const holes = document.querySelectorAll('.hole');
   }
 
   moles.forEach(mole => mole.addEventListener('click', bonk));
+
+// *****************************************************
+// *****************  WHACK ME GAME  *******************
+// *****************************************************
+
+const moveForward = (player) => {
+  const wagon = document.querySelector(`#player${player}-race .active`)
+  if (wagon.nextElementSibling) {
+    wagon.classList.remove('active');
+    wagon.nextElementSibling.classList.add('active')
+  }
+  if (wagon.nextElementSibling.classList.value.includes("finish")) {
+    setTimeout(function(){ alert(`Player number ${player} is the winner`) }, 500);
+    setTimeout(function(){ window.location.reload() }, 500);
+  }
+}
+
+document.addEventListener("keyup", (event) => {
+  if (event.key === "q") {
+    moveForward(1);
+  } else if (event.key === "p") {
+    moveForward(2);
+  }
+});
+
 
