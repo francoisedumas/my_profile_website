@@ -37,3 +37,23 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+// SOCIAL SOCIALBOX
+
+const socialBox = document.getElementById('socialBox');
+const socialContact = document.getElementById('socialContact');
+const closeSocial = document.getElementById('closeSocial');
+
+closeSocial.addEventListener('click', () => {
+    socialContact.style.display = 'none';
+})
+
+
+setTimeout(() => {
+    socialBox.style.display = 'block';
+}, 3000);
+
+setInterval(() => {
+    socialBox.style.display = 'block';
+}, 16000);
+
